@@ -1,0 +1,15 @@
+{
+  "name": "react-fused",
+  "version": "0.0.1",
+  "main": "react-fused-config.js",
+  "bin": {
+    "react-fused": "react-fused.js"
+  },
+  "dependencies": {
+    "yargs": "8.0.2",
+    "fuse-box": "2.2.0",
+    "tslib": "1.7.1",
+    "typescript": "2.5.0-dev.20170629"
+  },
+  "license": "MIT"
+}

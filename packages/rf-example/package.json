@@ -1,0 +1,19 @@
+{
+  "name": "rf-example",
+  "version": "0.0.1",
+  "main": "index.tsx",
+  "license": "MIT",
+  "scripts": {
+    "start": "react-fused run",
+    "build": "react-fused build"
+  },
+  "devDependencies": {
+    "react-fused": "0.0.1"
+  },
+  "dependencies": {
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "@types/react": "15.0.34",
+    "@types/react-dom": "15.5.1"
+  }
+}

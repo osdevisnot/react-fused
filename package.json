@@ -1,0 +1,39 @@
+{
+  "name": "react-fused-monorepo",
+  "version": "0.0.1",
+  "private": true,
+  "repository": "https://github.com/osdevisnot/react-fused.git",
+  "author": "osdevisnot <osdevisnot@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "prerootsetup": "git clean -fdX",
+    "rootsetup": "yarn",
+    "presetup": "npm run rootsetup",
+    "setup": "oao bootstrap",
+    "postsetup": "node ./tasks/cli-install.js",
+    "format": "prettier --single-quote --print-width 120 --write '**/*.js' '**/*.tsx'",
+    "format:npm": "npm-sort && oao exec -- npm-sort",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run format",
+      "git add"
+    ],
+    "*.tsx": [
+      "npm run format",
+      "git add"
+    ],
+    "*package.json": [
+      "npm run format:npm",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "husky": "0.14.2",
+    "lint-staged": "4.0.0",
+    "npm-sort": "0.0.4",
+    "oao": "0.8.5",
+    "prettier": "1.5.2"
+  }
+}
