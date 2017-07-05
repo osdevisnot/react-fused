@@ -1,4 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
+import { injectGlobal } from 'styled-components';
 
-ReactDOM.render(<div>Hello there</div>, document.getElementById('app'), () => {});
+injectGlobal`
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+`;
+
+ReactDOM.render(<App />, document.getElementById('app'));
