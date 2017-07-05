@@ -15,7 +15,8 @@
     "outDir": "dist/",
     "noEmitHelpers": true,
     "preserveConstEnums": true,
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": true
   },
   "exclude": [],
   "compileOnSave": false,

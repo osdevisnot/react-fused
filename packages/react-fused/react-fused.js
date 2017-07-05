@@ -1,13 +1,16 @@
 #!/usr/bin/env node
 const path = require('path');
 const exec = require('child_process').execSync;
+const del = require('del');
 
 const run = (argv, command = 'node fuse.js') =>
-  exec(command, {
-    stdio: [0, 1, 2],
-    env: Object.assign({}, process.env, argv, {
-      command: argv._[0]
-    })
+  del(['dist', path.join(__dirname, '.fusebox')], { force: true }).then(_ => {
+    exec(command, {
+      stdio: [0, 1, 2],
+      env: Object.assign({}, process.env, argv, {
+        command: argv._[0]
+      })
+    });
   });
 
 require('yargs')
