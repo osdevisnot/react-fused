@@ -13,7 +13,7 @@
     "setup": "oao bootstrap",
     "postsetup": "node ./tasks/cli-install.js",
     "preverify": "npm run setup",
-    "verify": "cd packages/rf-example && react-fused build",
+    "verify": "cd packages/react-fused-examples/react-fused-app && yarn && react-fused build",
     "format": "prettier --single-quote --print-width 120 --write '**/*.js' '**/*.tsx'",
     "format:npm": "npm-sort && oao exec -- npm-sort",
     "precommit": "lint-staged"
