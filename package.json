@@ -1,6 +1,7 @@
 {
   "name": "react-fused-monorepo",
   "version": "0.0.1",
+  "description": "A CLI tool based on FuseBox for React Applications and Libraries",
   "private": true,
   "repository": "https://github.com/osdevisnot/react-fused.git",
   "author": "osdevisnot <osdevisnot@gmail.com>",

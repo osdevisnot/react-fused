@@ -1,6 +1,7 @@
 {
   "name": "react-fused",
   "version": "0.0.1",
+  "description": "A CLI tool based on FuseBox for React Applications and Libraries",
   "main": "react-fused-config.js",
   "bin": {
     "react-fused": "react-fused.js"
