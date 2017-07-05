@@ -12,7 +12,8 @@
     "tslib": "1.7.1",
     "typescript": "2.4.1",
     "del": "3.0.0",
-    "uglify-js": "3.0.23"
+    "uglify-js": "3.0.23",
+    "plop": "1.8.0"
   },
   "license": "MIT"
 }

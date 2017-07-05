@@ -3,6 +3,8 @@ const { FuseBox, WebIndexPlugin, EnvPlugin, QuantumPlugin } = require('fuse-box'
 
 const tsConfig = path.resolve(__dirname, 'config', 'tsconfig.json');
 
+console.log('tsConfig : ', tsConfig);
+
 module.exports = function(env) {
   const { command, port } = process.env;
   const isProd = command === 'build';
@@ -15,13 +17,13 @@ module.exports = function(env) {
       EnvPlugin({ 'process.env.NODE_ENV': isProd ? 'production' : 'development' }),
       WebIndexPlugin({
         template: path.resolve(__dirname, 'templates', 'index.html')
-      })
-      // isProd &&
-      //   QuantumPlugin({
-      //     treeshake: true,
-      //     removeExportsInterop: false,
-      //     uglify: true
-      //   })
+      }),
+      isProd &&
+        QuantumPlugin({
+          treeshake: true,
+          removeExportsInterop: false,
+          uglify: true
+        })
     ],
     hash: isProd,
     cache: !isProd,

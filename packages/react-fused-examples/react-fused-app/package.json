@@ -1,14 +1,10 @@
 {
-  "name": "rf-example",
+  "name": "react-fused-app",
   "version": "0.0.1",
   "main": "index.tsx",
   "license": "MIT",
-  "scripts": {
-    "start": "react-fused run",
-    "build": "react-fused build"
-  },
   "devDependencies": {
-    "react-fused": "0.0.1"
+    "react-fused": "file:../../react-fused"
   },
   "dependencies": {
     "react": "15.6.1",

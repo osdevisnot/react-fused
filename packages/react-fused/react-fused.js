@@ -42,4 +42,9 @@ require('yargs')
       console.log('running test command');
     }
   )
+  .command('gen', 'generate react fused applications/components', {}, argv => {
+    const plop = path.join(__dirname, 'node_modules', '.bin', 'plop');
+    const generator = path.join(__dirname, 'generators', 'generators.js');
+    run(argv, `${plop} --plopfile ${generator}`);
+  })
   .help().argv;
