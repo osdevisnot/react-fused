@@ -1,9 +1,5 @@
 const path = require('path');
-const { FuseBox, WebIndexPlugin, EnvPlugin, QuantumPlugin } = require('fuse-box');
-
-const tsConfig = path.resolve(__dirname, 'config', 'tsconfig.json');
-
-console.log('tsConfig : ', tsConfig);
+const { FuseBox, WebIndexPlugin, BabelPlugin, EnvPlugin, QuantumPlugin } = require('fuse-box');
 
 module.exports = function(env) {
   const { command, port } = process.env;
@@ -15,6 +11,12 @@ module.exports = function(env) {
     experimentalFeatures: true,
     plugins: [
       EnvPlugin({ 'process.env.NODE_ENV': isProd ? 'production' : 'development' }),
+      BabelPlugin({
+        config: {
+          sourceMaps: true,
+          presets: ['react-app']
+        }
+      }),
       WebIndexPlugin({
         template: path.resolve(__dirname, 'templates', 'index.html')
       }),
@@ -29,13 +31,12 @@ module.exports = function(env) {
     cache: !isProd,
     target: 'browser',
     log: true,
-    debug: true,
-    tsConfig
+    debug: true
   });
 
-  const vendor = fuse.bundle('vendor').instructions(` ~ index.tsx +tslib`);
+  const vendor = fuse.bundle('vendor').instructions(` ~ index.jsx`);
 
-  const app = fuse.bundle('app').instructions(` !> [index.tsx]`);
+  const app = fuse.bundle('app').instructions(` !> [index.jsx]`);
 
   if (command === 'run') {
     fuse.dev({ port });

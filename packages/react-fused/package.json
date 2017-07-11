@@ -7,13 +7,13 @@
     "react-fused": "react-fused.js"
   },
   "dependencies": {
-    "yargs": "8.0.2",
+    "babel-core": "6.25.0",
+    "babel-preset-react-app": "3.0.1",
     "fuse-box": "2.2.0",
-    "tslib": "1.7.1",
+    "plop": "1.8.0",
     "typescript": "2.4.1",
-    "del": "3.0.0",
     "uglify-js": "3.0.23",
-    "plop": "1.8.0"
+    "yargs": "8.0.2"
   },
   "license": "MIT"
 }

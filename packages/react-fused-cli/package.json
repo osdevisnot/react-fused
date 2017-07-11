@@ -1,0 +1,13 @@
+{
+  "name": "react-fused-cli",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "react-fused": "react-fused.js"
+  },
+  "dependencies": {
+    "del": "3.0.0",
+    "yargs": "8.0.2"
+  }
+}
