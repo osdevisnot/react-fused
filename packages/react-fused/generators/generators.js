@@ -1,5 +1,6 @@
 const path = require('path');
 const pkg = require('../package.json');
+const exec = require('child_process').execSync;
 
 const prompts = {
   name: {
@@ -16,6 +17,10 @@ const prompts = {
 };
 
 module.exports = function(plop) {
+  plop.setActionType('install', function(answers, config, plop) {
+    exec('yarn', { cwd: config.path, stdio: 'inherit' });
+    return true;
+  });
   plop.setGenerator('app', {
     description: 'react-fused application',
     prompts: [prompts.name],
@@ -36,7 +41,7 @@ module.exports = function(plop) {
       };
       return [
         fromBaseToRoot('fuse.js'),
-        fromBaseToRoot(path.join('src', 'index.tsx')),
+        fromBaseToRoot(path.join('src', 'index.jsx')),
         fromBaseToRoot('README.md'),
         replaceDefaultApp('README.md'),
         fromBaseToRoot('package.json'),
@@ -46,7 +51,8 @@ module.exports = function(plop) {
           path: fromRoot('package.json'),
           pattern: /file:.*/gi,
           template: pkg.version + '"'
-        }
+        },
+        { type: 'install', path: fromRoot('/') }
       ];
     }
   });
