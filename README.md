@@ -3,6 +3,8 @@ A CLI tool based on FuseBox for React Applications and Libraries.
 
 [![Build Status](https://travis-ci.org/osdevisnot/react-fused.svg?branch=master)](https://travis-ci.org/osdevisnot/react-fused)
 
+Explore our chat community on [Gitter](https://gitter.im/react-fused) via @gitchat
+
 ## Quick Overview
 
 ### install `react-fused`
