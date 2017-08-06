@@ -5,9 +5,9 @@ A CLI tool based on FuseBox for React Applications and Libraries.
 
 ### install `react-fused`
 ```
-yarn global add react-fused-cli
+yarn global add react-fused
 # OR
-npm install -g react-fused-cli
+npm install -g react-fused
 ```
 
 ### scaffold application:
@@ -16,19 +16,12 @@ react-fused gen
 # and answer few questions
 ```
 
-### install dependencies
-Navigate to generated folder
+### run application
+Navigate to generated application
 ```
 cd <generated-folder>
 ```
-and install dependencies:
-```
-yarn
-# OR
-npm install
-```
-
-### run application
+and run the application
 ```
 react-fused run
 ```
@@ -43,13 +36,12 @@ and navigate to [http://localhost:9000](http://localhost:9000) to see your appli
 
 `packages/react-fused` - The core CLI tool is authored from `packages/react-fused`.
 
-`packages/react-fused-cli` - A command line wrapper for most common commands.
-
 `packages/react-examples` - example applications based on `react-fused`.
 
 `packages/react-fused-ui` - collection of generic UI components.
 
 ### Development Setup
+
 Clone this repository:
 ```
 git clone https://github.com/osdevisnot/react-fused.git
@@ -61,6 +53,7 @@ npm run setup
 ```
 
 #### Global Dependencies
+
 This repo uses [Yarn](https://yarnpkg.com/en/) package manager as preferred npm client for its speed, security and reliability. Please ensure you have yarn available globally. If not already setup, yarn can be easily setup using:
 ```
 npm install --global yarn
