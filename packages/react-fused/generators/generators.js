@@ -41,7 +41,7 @@ module.exports = function(plop) {
       };
       return [
         fromBaseToRoot('fuse.js'),
-        fromBaseToRoot(path.join('src', 'index.jsx')),
+        fromBaseToRoot(path.join('src', 'index.tsx')),
         fromBaseToRoot('README.md'),
         replaceDefaultApp('README.md'),
         fromBaseToRoot('package.json'),
