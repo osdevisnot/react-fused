@@ -24,8 +24,8 @@ module.exports = function(env) {
     hash: isProd,
     cache: !isProd,
     target: 'browser',
-    log: true,
-    debug: true
+    log: false,
+    debug: false
   });
 
   const vendor = fuse.bundle('vendor').instructions(` ~ index.tsx`);
